@@ -9,7 +9,7 @@ app.get('/',(req,res)=>{
 })
 
 mongoose.connect(process.env.MONGO_URL).then(()=>{
-    app.listen(process.env.PORT,(req,res)=>{
+    app.listen(process.env.PORT,()=>{
         console.log("Connected to Server & mongodb");
     })
 }).catch((err)=>{
